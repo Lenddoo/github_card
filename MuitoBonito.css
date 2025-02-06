@@ -1,0 +1,8 @@
+body{
+    background-color: black;
+}
+.containe{
+    height:100vh;
+    display: flex;
+    align-items: center;
+}
