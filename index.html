@@ -4,33 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>github card</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
+    
     <div class="container"> 
-        <div class="card text-center pt-5 pb-5">
+        <div class="card text-center pt-5 pb-5" id="espaco-botao">
+            <input type="text" class="form-control" id="usuario">
             <button type="button" class="btn btn-lg btn-primary mb-3" id="botao-carregar-dados">Carregar dados</button>
         </div>
 
-        <div class="card text-center">
+        <div class="card text-center" id="espaco-cartao">
             <img class="image-card card-img-top ms-auto me-auto" src="img-card.jpg">
             <img class="avatar ms-auto me-auto" id="foto" src="foto.jfif">
             <h1 class="nome" id="nome">Lendo</h1>
             <p class="bio ms-3 me-3" id="resumo">Capivara são MÓ PAZ<br><strong class="email" id="email">lenddoo@gmail.com</strong></p>
           
             <div class="redes-sociais mb-3">
-                <a href="https://x.com" class="btn" id="twitter">
+                <a href="https://x.com" class="btn" id="twitter" target="_blank">
                     <i class="bi bi-twitter-x"></i>
                 </a>
-                <a href="https://github.com/Lenddoo" class="btn" id="github">
+                <a href="https://github.com/Lenddoo" class="btn" id="github" target="_blank">
                     <i class="bi bi-github"></i>
                 </a>
-                <a href="https://dev.to" class="btn" id="blog">
+                <a href="https://dev.to" class="btn" id="blog" target="_blank">
                     <i class="bi bi-rss"></i>
                 </a>   
             </div>
+            <button type="button" class="btn btn-primary mb-3" id="botao-outro-usuario">
+                <i class=" bi bi-search me-2"></i>Pesquisar outro usuario
+            </button>
         </div>  
     </div>
 

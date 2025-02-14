@@ -1,5 +1,7 @@
-function fnCarregarDados() {
-    const url = "https://api.github.com/users/Lenddoo"
+function fnCarregarDados(usuario) {
+    const url = "https://api.github.com/users/"+ usuario
+    //const url = "dados.json"
+    console.log(url)
     fetch(url)
         .then(resposta => {
             return resposta.json()
@@ -13,13 +15,30 @@ function fnMostrarDados(foto, nome, resumo, email, twitter, github, blog,){
     document.getElementById("nome").innerHTML = nome
     document.getElementById("resumo").innerHTML = resumo + "<br><strong id='email'></strong>"
     document.getElementById("email").innerHTML = email
-    document.getElementById("twitter").href = twitter
+    document.getElementById("twitter").href = "https://x.com/"+twitter
     document.getElementById("github").href = github
-    document.getElementById("blog").href = blog
-}
+    document.getElementById("blog").href = "https://" + blog
 
+    if(twitter == null){
+        document.getElementById("twitter").style.display = "none"
+    }else{
+        document.getElementById("twitter").style.display = "inline"
+    }
+
+    if(blog == null){
+        document.getElementById("blog").style.display = "none"
+    }else{
+        document.getElementById("blog").style.display = "inline"
+    }
+}
 let botao = document.getElementById("botao-carregar-dados")
 botao.addEventListener("click", function(){
-    //fnMostrarDados("foto.jpg", "Logan", "sei n", "logan@gmail.com", "https://x.com/gotoofflne", "https://github.com/lenddoo", "https://dev.to/gutoffline")
-    fnCarregarDados()
+    fnCarregarDados(document.getElementById("usuario").value)
+    document.getElementById("espaco-cartao").style.display = "block"
+    document.getElementById("espaco-botao").style.display = "none"
+})
+let botao_outro = document.getElementById("botao-outro-usuario")
+botao_outro.addEventListener("click", function () {
+    document.getElementById("espaco-botao").style.display = "block"
+    document.getElementById("espaco-cartao").style.display = "none" 
 })

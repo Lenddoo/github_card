@@ -1,25 +1,34 @@
-body{
+body {
     background-color: black;
 }
-.container{
+.container {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.card{
-   background-color: white;
-   width: 350px;
+.card {
+    background-color: white;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
 }
-
-.image-card{
+.image-card {
     height: 200px;
     object-fit: cover;
+    width: 100%;
 }
-.avatar{
+.avatar {
     width: 130px;
     height: 130px;
     border-radius: 100px;
     margin-top: -75px;
     border: 5px solid white;
 }
+
+#espaco-cartao{
+    display: none;
+}
+
